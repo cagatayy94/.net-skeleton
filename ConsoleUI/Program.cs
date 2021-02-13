@@ -10,6 +10,20 @@ namespace ConsoleUI
         {
             //ProductTest();
             //CategoryTest();
+            DtoTest();
+
+        }
+
+        private static void DtoTest()
+        {
+            ProductManager productManager = new ProductManager(new EfProductDal());
+
+            int i = 1;
+            foreach (var product in productManager.GetProductDetails())
+            {
+                Console.WriteLine(i + "->" + product.ProductName + " / " + product.CategoryName);
+                i++;
+            }
         }
 
         private static void CategoryTest()

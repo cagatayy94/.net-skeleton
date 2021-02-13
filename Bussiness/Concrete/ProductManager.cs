@@ -2,6 +2,7 @@
 using Bussiness.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Bussiness.Concrete
 {
@@ -33,6 +34,11 @@ namespace Bussiness.Concrete
         public List<Product> GetAllByUnitsInStock(int min, int max)
         {
             return _productDal.GetAll(p => p.UnitsInStock >= min && p.UnitsInStock <= max);
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            return _productDal.GetProductDetails();
         }
     }
 }
