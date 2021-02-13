@@ -15,6 +15,11 @@ namespace Bussiness.Concrete
             _productDal = productDal;
         }
 
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
+
         public List<Product> GetAll()
         {
             //rules
@@ -34,6 +39,11 @@ namespace Bussiness.Concrete
         public List<Product> GetAllByUnitsInStock(int min, int max)
         {
             return _productDal.GetAll(p => p.UnitsInStock >= min && p.UnitsInStock <= max);
+        }
+
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(p => p.ProductId == productId);
         }
 
         public List<ProductDetailDto> GetProductDetails()
