@@ -13,11 +13,7 @@ namespace Bussiness.Concrete
 
         public CategoryManager (ICategoryDal categoryDal)
         {
-            this._categoryDal = categoryDal;
-        }
-
-        public CategoryManager(EfCategoryDal efCategoryDal)
-        {
+            _categoryDal = categoryDal;
         }
 
         public List<Category> GetAll()
