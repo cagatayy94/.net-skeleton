@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Core.Utilities.Results;
 using Entities.Concrete;
 using Entities.DTOs;
 
@@ -13,6 +14,6 @@ namespace Bussiness.Abstract
         List<Product> GetAllByUnitsInStock(int min, int max);
         List<ProductDetailDto> GetProductDetails();
         Product GetById(int productId);
-        void Add(Product product);
+        IResult Add(Product product);
     }
 }
