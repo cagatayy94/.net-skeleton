@@ -8,8 +8,19 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductTest();
+            //ProductTest();
+            //CategoryTest();
+        }
 
+        private static void CategoryTest()
+        {
+            CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+            int i = 1;
+            foreach (var category in categoryManager.GetAll())
+            {
+                Console.WriteLine(i + "->" + category.CategoryName);
+                i++;
+            }
         }
 
         private static void ProductTest()
