@@ -19,7 +19,7 @@ namespace ConsoleUI
             ProductManager productManager = new ProductManager(new EfProductDal());
 
             int i = 1;
-            foreach (var product in productManager.GetProductDetails())
+            foreach (var product in productManager.GetProductDetails().Data)
             {
                 Console.WriteLine(i + "->" + product.ProductName + " / " + product.CategoryName);
                 i++;
@@ -42,7 +42,7 @@ namespace ConsoleUI
             ProductManager productManager = new ProductManager(new EfProductDal());
 
             int i = 1;
-            foreach (var item in productManager.GetAllByUnitPrice(90, 100))
+            foreach (var item in productManager.GetAllByUnitPrice(90, 100).Data)
             {
                 Console.WriteLine(i + "->" + item.ProductName);
                 i++;
