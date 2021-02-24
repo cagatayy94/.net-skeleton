@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Bussiness.Abstract;
 using Bussiness.Constants;
+using Bussiness.ValidationRules.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 
 namespace Bussiness.Concrete
 {
@@ -20,14 +22,10 @@ namespace Bussiness.Concrete
 
         public IResult Add(Product product)
         {
-            if (product.ProductName.Length < 2)
-            {
-                //remove magic strings
-                //return new ErrorResult("Unvalid Product Name");
-                return new ErrorResult(Messages.ProductNameInvalid);
-            }
+            ValidationTool.Validate(new ProductValidator(), product);
 
             _productDal.Add(product);
+
             return new SuccessResult(Messages.ProductAdded);
         }
 
