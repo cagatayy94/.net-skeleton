@@ -4,7 +4,7 @@ using Core.Utilities.Results;
 using Entities.Concrete;
 using Entities.DTOs;
 
-namespace Bussiness.Abstract
+namespace Business.Abstract
 {
     public interface IProductService
     {
@@ -15,5 +15,6 @@ namespace Bussiness.Abstract
         IDataResult<List<ProductDetailDto>> GetProductDetails();
         IDataResult<Product> GetById(int productId);
         IResult Add(Product product);
+        IResult Update(Product product);
     }
 }

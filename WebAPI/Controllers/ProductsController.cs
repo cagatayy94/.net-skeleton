@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Bussiness.Abstract;
+using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 

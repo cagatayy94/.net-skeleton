@@ -2,7 +2,7 @@
 using Entities.Concrete;
 using FluentValidation;
 
-namespace Bussiness.ValidationRules.FluentValidation
+namespace Business.ValidationRules.FluentValidation
 {
     public class ProductValidator:AbstractValidator<Product>
     {

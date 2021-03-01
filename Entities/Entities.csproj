@@ -6,10 +6,18 @@
 
   <ItemGroup>
     <Folder Include="Concrete\" />
-    <Folder Include="Abstract\" />
     <Folder Include="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Abstract\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Abstract\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Abstract\**" />
   </ItemGroup>
 </Project>
