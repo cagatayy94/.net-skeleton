@@ -28,6 +28,7 @@
     <Folder Include="CrossCuttingConcerns\Caching\" />
     <Folder Include="CrossCuttingConcerns\Caching\Microsoft\" />
     <Folder Include="CrossCuttingConcerns\Caching\Redis\" />
+    <Folder Include="Aspects\Autofac\Caching\" />
     <Folder Include="Aspects\Autofac\Transaction\" />
   </ItemGroup>
   <ItemGroup>
