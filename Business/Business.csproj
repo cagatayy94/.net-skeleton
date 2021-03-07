@@ -12,6 +12,8 @@
     <Folder Include="DependencyResolvers\Autofac\" />
     <Folder Include="ValidationRules\" />
     <Folder Include="ValidationRules\FluentValidation\" />
+    <Folder Include="BusinessAspect\" />
+    <Folder Include="BusinessAspect\Autofac\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entities\Entities.csproj" />
@@ -22,5 +24,7 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="FluentValidation" Version="9.5.1" />
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
   </ItemGroup>
 </Project>
