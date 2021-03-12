@@ -53,5 +53,13 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpGet("hello")]
+        public IActionResult Hello()
+        {
+            var result = "Hello";
+
+            return Ok(result);
+        }
     }
 }
